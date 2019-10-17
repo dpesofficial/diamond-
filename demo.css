@@ -1,0 +1,166 @@
+.diamonds {
+    text-align: center;
+    overflow: visible;
+    white-space: nowrap;
+    display: inline-block;
+}
+.diamond-row-wrap {
+    text-align: center;
+    position: relative;
+    clear: both;
+}
+.diamond-row-upper{
+    overflow: visible;
+    clear: both;
+    width: 100%;
+}
+.diamond-box-wrap {
+    float: left;
+    /* Size of diamonds */
+    width: 250px;
+    height: 250px;
+}
+.diamond-box {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    position: relative;
+    z-index: 1;
+
+    width: 70.710678118%;
+    /* x = sqrt(x^2 / 2) = 1 / sqrt(2) = 0.70710678118 */
+    height: 70.710678118%;
+    /* margin: 14.644660941%; */
+
+    border: 1px solid transparent;
+    transform-origin: bottom;
+}
+
+.diamond-box-inner {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: 141.421356237%;
+    /* sqrt(2) */
+    height: 141.421356237%;
+    margin: -20.7106781185% 0 0 -20.7106781185%;
+    /* (1 - sqrt(2)) / 2 */
+}
+
+/* CSS for demo */
+.item {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* padding: 40% 0; */
+
+    background-color: #666;
+    color: white;
+    background-position: center center;
+    background-size: cover;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.item:hover:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.diamondswrap {
+    text-align: center;
+    padding: 50px 20px 100px 20px;
+}
+
+.controls {
+    background-color: #272822;
+    padding: 20px;
+}
+
+/* meshdirect */
+.diamonds{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.diamond-box-wrap {
+    width: 260px;
+    height: 260px;
+    padding: 20px;
+}
+.diamond-box-wrap.big {
+    width: 490px;
+    height: 490px;
+}
+
+
+/* Version 2 */
+.squarewrap{
+    width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    transform: rotate(-45deg);
+    transform-origin: center center;
+    overflow: visible;
+}
+.squarewrap-item{
+    width: 240px;
+    height: 240px;
+    overflow: hidden;
+    margin: 50px;
+    transition: all .3s;
+}
+.squarewrap-img{
+    width: 100%;
+    transform: rotate(45deg) scale(1.4);
+    transform-origin: center center;
+}
+.squarewrap-item.big{
+    width: 490px;
+    height: 490px;
+    transition: all .5s;
+}
+.squarewrap-col.squarewrap-col--two {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.squarewrap-col.squarewrap-col--three{
+    position: relative;
+    top: 200px;
+}
+.squarewrap-col.squarewrap-col--three .squarewrap-item:first-child{
+    position: relative;
+    left: -30px;
+}

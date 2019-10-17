@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="demo.css">
+</head>
+
+<body>
+
+    <div class="diamondswrap">
+        <div class="diamonds">
+                <div class="diamond-box-wrap big">
+                    <div class="diamond-box">
+                        <div class="diamond-box-inner"><a href="#"
+                                class="item"
+                                style="background-image: url(https://picsum.photos/id/485/490/490);"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="diamond-box-wrap ">
+                    <div class="diamond-box">
+                        <div class="diamond-box-inner"><a href="#"
+                                class="item"
+                                style="background-image: url(https://picsum.photos/id/486/490/490);"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="diamond-box-wrap ">
+                    <div class="diamond-box">
+                        <div class="diamond-box-inner"><a href="#"
+                                class="item"
+                                style="background-image: url(https://picsum.photos/id/487/490/490);"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="diamond-box-wrap ">
+                    <div class="diamond-box">
+                        <div class="diamond-box-inner"><a href="#"
+                                class="item"
+                                style="background-image: url(https://picsum.photos/id/488/490/490);"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="diamond-box-wrap ">
+                    <div class="diamond-box">
+                        <div class="diamond-box-inner"><a href="#"
+                                class="item"
+                                style="background-image: url(https://picsum.photos/id/549/490/490);"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="diamond-box-wrap ">
+                    <div class="diamond-box">
+                        <div class="diamond-box-inner"><a href="#"
+                                class="item"
+                                style="background-image: url(https://picsum.photos/id/475/490/490);"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="diamond-box-wrap ">
+                    <div class="diamond-box">
+                        <div class="diamond-box-inner"><a href="#"
+                                class="item"
+                                style="background-image: url(https://picsum.photos/id/455/490/490);"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="diamond-box-wrap ">
+                    <div class="diamond-box">
+                        <div class="diamond-box-inner"><a href="#"
+                                class="item"
+                                style="background-image: url(https://picsum.photos/id/445/490/490);"></a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!--Static Version 2 -->
+    <div class="squarewrap">
+        <div class="squarewrap-col squarewrap-col--one">
+            <div class="squarewrap-item">
+                <img class="squarewrap-img" src="https://picsum.photos/id/465/490/490" alt="">
+            </div>
+        </div>
+        <div class="squarewrap-col squarewrap-col--two">
+            <div class="squarewrap-item big">
+                <img class="squarewrap-img" src="https://picsum.photos/id/474/490/490" alt="">
+            </div>
+            <div class="squarewrap-item">
+                <img class="squarewrap-img" src="https://picsum.photos/id/475/490/490" alt="">
+            </div>
+            <div class="squarewrap-item">
+                <img class="squarewrap-img" src="https://picsum.photos/id/495/490/490" alt="">
+            </div>
+        </div>
+        <div class="squarewrap-col squarewrap-col--three">
+            <div class="squarewrap-item">
+                <img class="squarewrap-img" src="https://picsum.photos/id/488/490/490" alt="">
+            </div>
+            <div class="squarewrap-item">
+                <img class="squarewrap-img" src="https://picsum.photos/id/487/490/490" alt="">
+            </div>
+            <div class="squarewrap-item">
+                <img class="squarewrap-img" src="https://picsum.photos/id/486/490/490" alt="">
+            </div>
+        </div>
+        <div class="squarewrap-col squarewrap-col--four">
+            <div class="squarewrap-item"> </div>
+            <div class="squarewrap-item"> </div>
+            <div class="squarewrap-item">
+                <img class="squarewrap-img" src="https://picsum.photos/id/485/490/490" alt="">
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.js"></script>
+<script src="https://unpkg.com/isotope-packery@2.0.1/packery-mode.pkgd.js"></script>
+<script type="text/javascript">
+    // external js: isotope.pkgd.js, packery-mode.pkgd.js
+    var $grid = $('.diamonds').isotope({
+        layoutMode: 'packery',
+        itemSelector: '.diamond-box-wrap'
+    });
+
+    //click event
+    $('.diamond-box-wrap a').click(function(e){
+        e.preventDefault();
+        $('.diamond-box-wrap').removeClass('big');
+        $(this).parents('.diamond-box-wrap').addClass('big');
+        $grid.isotope('layout')
+    });
+
+    //square block
+    $('.squarewrap-img').click(function(e){
+        e.preventDefault();
+        $('.squarewrap-item').removeClass('big');
+        $(this).parents('.squarewrap-item').addClass('big');
+    });
+</script>
+
+</html>
